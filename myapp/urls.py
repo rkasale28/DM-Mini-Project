@@ -5,5 +5,6 @@ from myapp import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('naive',views.naive_bayes,name='naive_bayes'),
-    path('sample',views.sample,name="sample")
+    path('knn',views.knn,name='knn'),
+    path('sample',views.sample,name='sample')
 ]
