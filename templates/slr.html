@@ -6,38 +6,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naive Bayes Classifier</title>
+    <title>Simple Linear Regression</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
-    <h2 class="text-center font-underline">Naive Bayes Classifier</h2>
+    <h2 class="text-center font-underline">Simple Linear Regression</h2>
+    
+    <div class="d-flex justify-content-center">
+        <div class="float-left">
+            <img src="{% static 'images/slr/slr_actual.jpg'%}" />
+            <div class="text-center">
+                <h6>
+                    <span class="font-weight-bold">Fig 1: </span>
+                    <span class="text-muted">Above figure represents the graph of actual likes v/s views</span>
+                </h6>
+            </div>
+        </div>
 
-    <div class="text-center mb-3">
-        <h3>
-            <span class="font-weight-bold">Accuracy: </span>
-            <span class="text-muted">{{ acc }} %</span>
-        </h3>
+        <div class="float-right">
+            <img src="{% static 'images/slr/slr_predicted.jpg'%}" />
+            <div class="text-center">
+                <h6>
+                    <span class="font-weight-bold">Fig 2: </span>
+                    <span class="text-muted">Above figure represents the graph of predicted likes v/s views</span>
+                </h6>
+            </div>
+        </div>
     </div>
-    
+
     <div class="text-center">
-        <img src="{% static 'images/nb/naive_bayes.jpg'%}" />
+        <img src="{% static 'images/slr/slr_comparison.jpg'%}" />
         <h6>
-            <span class="font-weight-bold">Fig 1: </span>
-            <span class="text-muted">Above figure represents the probabilities of every category id</span>
+            <span class="font-weight-bold">Fig 3: </span>
+            <span class="text-muted">Above figure represents the graph of comparison of above two graphs</span>
         </h6>
     </div>
-    
-    <div class="text-center">
-        <img src="{% static 'images/nb/naive_bayes_comparison.jpg'%}" />
-        <h6>
-            <span class="font-weight-bold">Fig 2: </span>
-            <span class="text-muted">Above figure represents the comparison of actual and the predicted values</span>
-        </h6>
-    </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
