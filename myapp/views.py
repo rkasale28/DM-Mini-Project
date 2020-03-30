@@ -48,7 +48,7 @@ def naive_bayes(request):
         plt.text(v+0.00001, i-0.2, str(round(x[i], 4)), color='blue')
     fig.set_size_inches(13, 5)
     plt.tight_layout()
-    plt.savefig('static/images/nb/aive_bayes.jpg')
+    plt.savefig('static/images/nb/naive_bayes.jpg')
 
     n_groups = len(unq_cat_id)
     true = list(df1['category_id'])
@@ -209,8 +209,8 @@ def slr(request):
     plt.savefig('static/images/slr/slr_predicted.jpg')
     
     figure, axes = plt.subplots()
-    plt.scatter(x,true, c='b')
-    plt.scatter(x,pred, c='r')
+    plt.scatter(x,true, c='b', label='actual_likes')
+    plt.scatter(x,pred, c='r', label='predicted_likes')
     plt.legend(loc='upper left')
     plt.xlabel('Views')
     plt.ylabel('Likes')
