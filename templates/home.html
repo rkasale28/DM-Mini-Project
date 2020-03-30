@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .card {
+            display: inline-block;
+            border-radius: 30px;
+            width: 400px;
+            border-color: #068931;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 15vw;
+            object-fit: cover;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        .d-block {
+            height: 20vw;
+            object-fit: cover;
+        }
+
+        .card-body {
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center">Data Mining Strategies on Youtube Dataset</h1>
+
+    <h6 class="text-justify ml-3 mr-3" style="text-indent: 30px;">
+        YouTube is an American online video-sharing platform. The first ever YouTube video was uploaded on 23rd April,
+        2005. Since, then the popularity of YouTube has increased in many folds. This can be evident from the fact that
+        every year the number of YouTube channels is growing tremendously. As of 2019, the no. of channels on YouTube
+        grew up to 31 million. This number is around 25% greater as compared to 2018. Along with YouTube channels, the
+        number of YouTube users is also increasing. According to Statista, YouTube has almost 2 billion monthly active
+        users. Some of the users don’t watch the YouTube content with Google accounts logged in. Therefore, the number
+        of active users is definitely greater than 2 billion.
+    </h6>
+
+    <h6 class="text-justify ml-3 mr-3" style="text-indent: 30px;">
+        These YouTube channels earn the revenue based upon how many times their video has been viewed by the users.
+        Therefore, it is the responsibility of YouTube to help content creators reach their audience
+    </h6>
+
+    <h6 class="text-justify ml-3 mr-3" style="text-indent: 30px;">
+        The dataset used represents the day to day list of top trending Indian YouTube videos. The dataset was collected
+        using YouTube API. The dataset includes several days of record with up to 5000 videos. Data includes the
+        attributes as follows:
+    </h6>
+
+    <h6 class="text-justify ml-3 mr-3" style="text-indent: 30px;">
+        <ul>
+            <li>title</li>
+            <li>channel_title</li>
+            <li>publish_time</li>
+            <li>trending_date</li>
+            <li>views</li>
+            <li>likes</li>
+            <li>dislikes</li>
+            <li>comment_count</li>
+            <li>comments_disabled</li>
+            <li>ratings_disabled</li>
+            <li>category_id</li>
+        </ul>
+    </h6>
+
+    <div class="d-flex justify-content-center pl-3 pt-3 pb-3" style="background-color:#068931;">
+        <div class="card mr-5">
+            <img class="card-img-top" src="{% static 'images/nb.jpg'%}">
+
+            <div class="card-body">
+                <h3 class="card-title">Naive Bayes Classifier</h3>
+                <a href="{% url 'naive_bayes'%}" class="btn btn-primary float-right mb-2" style="color: white;">View Results</a>
+            </div>
+        </div>
+
+        <div class="card mr-5">
+            <img class="card-img-top" src="{% static 'images/knn.png'%}">
+
+            <div class="card-body">
+                <h3 class="card-title">KNN Classifier</h3>
+                <a href="knn" class="btn btn-primary float-right mb-2" style="color: white;">View Results</a>
+            </div>
+        </div>
+
+        <div class="card mr-3">
+            <img class="card-img-top" src="{% static 'images/linear-regression.png'%}">
+
+            <div class="card-body">
+                <h3 class="card-title">Simple Linear Regression</h3>
+                <a href="slr" class="btn btn-primary float-right mb-2" style="color: white;">View Results</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
